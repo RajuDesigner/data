@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="http://www.prepbootstrap.com/Content/shieldui-lite/dist/css/light/all.min.css" />
+
+    <title>Home</title>
+
+    
+    <style>
+        html, body{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background:#f9fafb!important;
+            font-family: 'Nunito', sans-serif;
+        }
+        .header{
+            background: blue;
+            margin-bottom: 56px;
+        }
+        .dropdown-menu  {
+            width: 230px;
+        } 
+        .nav-tabs{
+            background: #265485;
+        }
+        .nav-tabs .nav-link{
+            border: 0;
+            border-radius:0;
+            min-width: 12rem;
+            text-align: center;
+            font-weight: 400;
+             font-size: 18px;
+            
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#36afa8+0,2d93ac+50,1961b3+100,207cca+100 */
+background: rgb(54,175,168); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(54,175,168,1) 0%, rgba(45,147,172,1) 50%, rgba(25,97,179,1) 100%, rgba(32,124,202,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(54,175,168,1) 0%,rgba(45,147,172,1) 50%,rgba(25,97,179,1) 100%,rgba(32,124,202,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(54,175,168,1) 0%,rgba(45,147,172,1) 50%,rgba(25,97,179,1) 100%,rgba(32,124,202,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#36afa8', endColorstr='#207cca',GradientType=0 ); /* IE6-9 */
+
+            border-right: 2px solid #0b2d50;
+            color: #fff;
+
+        }
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+            color: #003355;
+            background:#fff;
+            border-right: 2px solid #0b2d50;
+            font-weight: 600;
+    font-size: 19px;
+        }
+        .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover{
+            border-color:#0b2d50;
+        }
+        .container-tab{
+        width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+        }
+        .card{
+            border-radius: 0;
+
+        }
+        .card-header{
+            text-transform: capitalize;
+            font-weight: 600;
+    color: #003355;
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#89c5cd+0,cfe4f5+0,5f9ca8+0,cfe4f5+100,005eae+100 */
+background: rgb(137,197,205); /* Old browsers */
+background: -moz-linear-gradient(left, rgba(137,197,205,1) 0%, rgba(207,228,245,1) 0%, rgba(95,156,168,1) 0%, rgba(207,228,245,1) 100%, rgba(0,94,174,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(137,197,205,1) 0%,rgba(207,228,245,1) 0%,rgba(95,156,168,1) 0%,rgba(207,228,245,1) 100%,rgba(0,94,174,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(137,197,205,1) 0%,rgba(207,228,245,1) 0%,rgba(95,156,168,1) 0%,rgba(207,228,245,1) 100%,rgba(0,94,174,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#89c5cd', endColorstr='#005eae',GradientType=1 ); /* IE6-9 */
+border-radius: 0!important;
+        }
+        .over{
+            /* height: 295px;
+            overflow: hidden; */
+        }
+        #container{
+            width: 100%;
+            height: auto;
+        }
+      
+    </style>
+   
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation">
+                <div class="container">
+                    <a class="navbar-brand" href="#">SD-WAN Management System</a>
+                    <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
+                        &#9776;
+                    </button>
+                    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+                       
+                        <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
+                            <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i class="fa fa-cog fa-fw fa-lg"></i></a></li>
+                            <li class="dropdown order-1">
+                                <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+                                <ul class="dropdown-menu dropdown-menu-right mt-2">
+                                   <li class="px-3 py-2">
+                                       <form class="form" role="form">
+                                            <div class="form-group">
+                                                <input id="emailInput" placeholder="Email" class="form-control form-control-sm" type="text" required="">
+                                            </div>
+                                            <div class="form-group">
+                                                <input id="passwordInput" placeholder="Password" class="form-control form-control-sm" type="text" required="">
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                            </div>
+                                            <div class="form-group text-center">
+                                                <small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
+                                            </div>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            </div>
+            <div class="head-tab">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu1">ISA</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu2">Monitor</a>
+    </li>
+    <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#menu3">Analytics & Report</a>
+     </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container-tab tab-pane active"><br>
+      <!-- <h3>HOME</h3> -->
+      <div class="row">
+          <div class="col-md-8">
+                <div class="card ">
+                        <div class="card-header">
+                          key highlights
+                        </div>
+                        <div class="card-body">
+                               <div class="wrapper">
+  <div class="c100 p90 blue">
+      <span>90%</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+  </div>
+  <div class="c100 p75 pink">
+      <span>75%</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+  </div>
+  <div class="c100 p70 green">
+      <span>70%</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+  </div>
+  <div class="c100 p85 orange">
+      <span>85%</span>
+      <div class="slice">
+        <div class="bar"></div>
+        <div class="fill"></div>
+      </div>
+  </div>
+</div>                        </div>
+                      </div>
+          </div>
+          <div class="col-md-4">
+                <div class="card ">
+                        <div class="card-header">
+                          application activity
+                        </div>
+                        <div class="card-body over">
+                                <div id="container" style="min-width: 400px; height: 400px; max-width: 100%; margin: 0 auto"></div>
+                        </div>
+                      </div>
+          </div>
+      </div>
+      
+    </div>
+    <div id="menu1" class="container tab-pane fade"><br>
+      <h3>Menu 1</h3>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 2</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+   <div id="modalPassword" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Forgot password</h3>
+                    <button type="button" class="close font-weight-light" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <div class="modal-body">
+                    <p>Reset your password..</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                    <button class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+<script type="text/javascript" src="http://www.prepbootstrap.com/Content/shieldui-lite/dist/js/shieldui-lite-all.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript">
+
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Chrome',
+            y: 61.41,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Internet Explorer',
+            y: 11.84
+        }, {
+            name: 'Firefox',
+            y: 10.85
+        }, {
+            name: 'Edge',
+            y: 4.67
+        }, {
+            name: 'Safari',
+            y: 4.18
+        }, {
+            name: 'Sogou Explorer',
+            y: 1.64
+        }, {
+            name: 'Opera',
+            y: 1.6
+        }, {
+            name: 'QQ',
+            y: 1.2
+        }, {
+            name: 'Other',
+            y: 2.61
+        }]
+    }]
+});
+
+</script>
+</body>
+</html>
